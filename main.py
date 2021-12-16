@@ -3,7 +3,9 @@ import os
 from random import randint
 
 client = discord.Client()
-  
+
+#set to general channel(only channel)
+channel = client.get_channel('886093231660597290')
 
 #console logging that bot is logged in and online
 @client.event
@@ -26,7 +28,7 @@ async def on_message(msg):
     await msg.channel.send("Alright, ready to start!")
   else:
     #Jester talk
-    await channel.send(random_joke())
+    await msg.channel.send(random_joke())
     
 #token defined privately in repl.it
 client.run(os.environ['TOKEN'])
