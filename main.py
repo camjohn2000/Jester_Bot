@@ -28,6 +28,6 @@ async def on_message(msg):
     #Jester talk
     await msg.channel.send(random_joke())
     
-#token defined privately
+#token defined privately in repl.it
 client.run(os.environ['TOKEN'])
 
