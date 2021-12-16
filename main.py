@@ -12,7 +12,7 @@ async def on_ready():
 
 def random_joke():
     jester_line = list(open("jester.txt"))
-    return jester_line[randint(0, len())]
+    return jester_line[randint(0, len(jester_line))]
 
 @client.event
 async def on_message(msg):
@@ -26,7 +26,7 @@ async def on_message(msg):
     await msg.channel.send("Alright, ready to start!")
   else:
     #Jester talk
-    await msg.channel.send(random_joke())
+    await channel.send(random_joke())
     
 #token defined privately in repl.it
 client.run(os.environ['TOKEN'])
