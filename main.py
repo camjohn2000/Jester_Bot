@@ -5,7 +5,7 @@ from random import randint
 client = discord.Client()
 
 #set to general channel(only channel)
-channel = client.get_channel('886093231660597290')
+channel = client.get_channel('755969981547544578')
 
 #console logging that bot is logged in and online
 @client.event
