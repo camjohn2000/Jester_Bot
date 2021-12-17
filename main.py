@@ -11,6 +11,7 @@ channel = client.get_channel('755969981547544578')
 @client.event
 async def on_ready():
   print("Logged in as {0.user}".format(client))
+  await client.change_presence(status=discord.Status.online, activity=discord.Game('Waiting for INS alignment'))
 
 def random_joke():
     jester_line = list(open("jester.txt"))
