@@ -14,7 +14,7 @@ async def on_ready():
 
 def random_joke():
     jester_line = list(open("jester.txt"))
-    return jester_line[randint(0, len(jester_line - 1))]
+    return jester_line[randint(0, len(jester_line) - 1)]
 
 @client.event
 async def on_message(msg):
