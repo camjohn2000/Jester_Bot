@@ -23,8 +23,13 @@ async def on_message(msg):
   if msg.author == client.user:
     return
   
+  #When Trey specifically messages in the Discord server
+  elif msg.author.id == ('131971739293843457'):
+    tren_line = list(open("tren.txt"))
+    await msg.channel.send(tren_line[randint(0, len(tren_line) - 1)])
+
   #bot replies when it reads command in text channel
-  if msg.content.startswith("%hey jester"):
+  elif msg.content.startswith("%hey jester"):
     await msg.channel.send("Alright, ready to start!")
   else:
     #Jester talk
